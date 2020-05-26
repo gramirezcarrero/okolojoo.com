@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="konva.min.js"></script>
+        <!--  content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+        <!-- <meta name="viewport" content="width=device-width, user-scalable=no"> -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Marketing tool</title>
+        <style>
+            #canvas{
+                border: solid 1px black;
+                width: auto;
+                height: auto;
+            }
+            body{
+                background-image: url('background.png');
+
+            }
+            @viewport{
+                zoom: 0.03;
+            }
+            .ico{
+                width: 40px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                <h1>
+                    Opciones de logo
+                </h1>    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2>
+                        Tamaño:
+                    </h2>
+                    <input id="widthSelected" value="247">
+                    <input id="heightSelected" value="138">
+                </div>
+                
+                <div class="col">
+                    <h2>Escoja un logo</h2>
+                    <div onclick="changeLogo(this)">
+                        <label class=""> Logo1 </label>
+                        <img class="ico" src="marca2.png">
+                        <input name="logo" class="miror" id="marca2" type="radio">
+                    </div>
+                    <div onclick="changeLogo(this)">
+                        <label class=""> Logo2 </label>
+                        <img class="ico" src="logo2.png">
+                        <input name="logo" class="miror" id="logo2" type="radio">
+                    </div>
+                    <div onclick="changeLogo(this)">
+                        <label class=""> logo blanco </label>
+                        <img class="ico" src="white.png">
+                        <input name="logo" class="miror" id="white" type="radio">
+                    </div>
+                    <div onclick="changeLogo(this)">
+                        <label class=""> Ligia </label>
+                        <img class="ico" src="logoLigia.png">
+                        <input name="logo" class="miror" id="logoLigia" type="radio">
+                    </div>
+                    <div onclick="changeLogo(this)">
+                        <label class=""> memelandia </label>
+                        <img src="icon.png" alt="" class="ico">
+                        <input name="logo" class="miror" id="icon" type="radio">
+                    </div>
+                    <input id="slider" type="range" min="0" max="1" step="0.1" value="1" />
+                </div>
+                
+            </div>
+            <div class="row">
+                <div>
+                    <a id="download" class="" download="myImage.png" href="" onclick="download_img(this);">Download to myImage.jpg</a>
+                </div>
+                <button onclick="restartButton()"> Restaurar</button>
+            </div>
+            <div class="row">
+                <div>
+                    <h1>Elija una imagen de Fondo</h1>
+                    <input id="file_input" type="file">
+                    <select id="mover" >
+                        <option>
+                            Mover
+                        </option>
+                        <option>
+                            no mover
+                        </option>
+
+                    </select>
+                </div>
+                <div id="canvas" class=""></div>
+                
+           
+            </div>
+                
+            </div>
+        </div>
+
+    </body>
+    <script src="index.js"></script>
+</html>
