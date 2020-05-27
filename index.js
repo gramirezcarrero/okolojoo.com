@@ -12,6 +12,9 @@ $(".miror").on("change", function () {
     if (LOGO === "logo2") {
         $("#widthSelected").val(200)
         $("#heightSelected").val(200)
+    } else if (LOGO === "white" || LOGO === "marca2"  ) {
+        $("#widthSelected").val(500)
+        $("#heightSelected").val(305)
     }
 })
 var imageObj
