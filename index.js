@@ -20,9 +20,8 @@ $(".miror").on("change", function () {
 var imageObj
 var Logo
 function changeLogo(e) {
-    $(e).find("input").prop("checked", true)
     if (imageSelected === true) {
-        LOGO = $("input:checked").attr("id")
+        LOGO = $(e).attr("id")
         if (LOGO === "white" || LOGO === "marca2"  ) {
             $("#widthSelected").val(500)
             $("#heightSelected").val(305)

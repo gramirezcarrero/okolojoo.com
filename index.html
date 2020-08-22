@@ -14,62 +14,63 @@
                 height: auto;
             }
             body{
-                background-image: url('background.png');
+                /* background-image: url('background.png'); */
 
             }
             @viewport{
                 zoom: 0.03;
             }
             .ico{
-                width: 40px;
+                width: 10vh;
             }
-            
+            .gridSeudo{
+                display: grid;
+                grid-template-columns: 100%;
+            }
+            .col-grid{
+                display: grid;
+                grid-template-columns: 25% 25% 25% 25%;
+            }
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                <h1>
-                    Opciones de logo
-                </h1>    
-                </div>
+        <div class="gridSeudo">
+            <div>
+                <h2>
+                    Tamaño:
+                </h2>
+                <input id="widthSelected" value="247">
+                <input id="heightSelected" value="138">
             </div>
-            <div class="row">
-                <div class="col">
-                    <h2>
-                        Tamaño:
-                    </h2>
-                    <input id="widthSelected" value="247">
-                    <input id="heightSelected" value="138">
-                </div>
-                
-                <div class="col">
-                    <h2>Escoja un logo</h2>
-                    <div onclick="changeLogo(this)">
-                        <label class=""> Logo1 </label>
+            <div>
+                <div class="col-grid">
+                    <div style="width: 15vh;height: 14vh;background:white;" onclick="changeLogo(this)" id="marca2">
+                       
                         <img class="ico" src="marca2.png">
-                        <input name="logo" class="miror" id="marca2" type="radio">
                     </div>
-                    <div onclick="changeLogo(this)">
-                        <label class=""> Logo2 </label>
+                    <div style="width: 15vh;height: 14vh;background:white;" onclick="changeLogo(this)" id="logo2">
+
                         <img class="ico" src="logo2.png">
-                        <input name="logo" class="miror" id="logo2" type="radio">
+
                     </div>
-                    <div onclick="changeLogo(this)">
-                        <label class=""> logo blanco </label>
+                    <div style="width: 15vh;height: 14vh;background:lightgray;" onclick="changeLogo(this)" id="white">
+
                         <img class="ico" src="white.png">
-                        <input name="logo" class="miror" id="white" type="radio">
                     </div>
-                    <div onclick="changeLogo(this)">
-                        <label class=""> caliche </label>
+                    <div style="width: 15vh;height: 14vh;background:white;" onclick="changeLogo(this)" id="logocaliche">
+
                         <img class="ico" src="logocaliche.png">
-                        <input name="logocaliche" class="miror" id="logocaliche"  type="radio">
                     </div>
-                    <input id="slider" type="range" min="0" max="1" step="0.1" value="1" />
+                    <div style="height:30px;background:rgb(73, 96, 107);">
+
+                        <input id="slider" type="range" min="0" max="1" step="0.1" value="1" />
+                    </div>
                 </div>
-                
+
             </div>
+        </div>
+        <div class="container">
+           
             <div class="row">
                 <div>
                     <a id="download" class="" download="myImage.png" href="" onclick="download_img(this);">Download to myImage.jpg</a>
