@@ -73,7 +73,7 @@ function drawImage(_imageObj, width, height) {
     }
 
 }
-var slider = document.getElementById('slider');
+// var slider = document.getElementById('slider');
 var slider = document.getElementById('slider2');
 
 slider.oninput = function () {
@@ -81,8 +81,8 @@ slider.oninput = function () {
     layer.batchDraw()
 };
 slider2.oninput = function () {
-    Logo.width(parseFloat(slider.value));
-    Logo.height(parseFloat(slider.value));
+    Logo.width(Number(slider.value));
+    Logo.height(Number(slider.value));
     layer.batchDraw()
 };
 
