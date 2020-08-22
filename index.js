@@ -74,9 +74,15 @@ function drawImage(_imageObj, width, height) {
 
 }
 var slider = document.getElementById('slider');
+var slider = document.getElementById('slider2');
 
 slider.oninput = function () {
     Logo.opacity(parseFloat(slider.value));
+    layer.batchDraw()
+};
+slider2.oninput = function () {
+    Logo.width(parseFloat(slider.value));
+    Logo.height(parseFloat(slider.value));
     layer.batchDraw()
 };
 
