@@ -6,7 +6,7 @@ var stage = new Konva.Stage({
     width: 1500,
     height: 1500
 });
-let LOGO = 'logoLigia'
+let LOGO = 'white'
 $(".miror").on("change", function () {
     LOGO = $("input:checked").attr("id")
     if (LOGO === "logo2") {
@@ -23,6 +23,13 @@ function changeLogo(e) {
     $(e).find("input").prop("checked", true)
     if (imageSelected === true) {
         LOGO = $("input:checked").attr("id")
+        if (LOGO === "white" || LOGO === "marca2"  ) {
+            $("#widthSelected").val(500)
+            $("#heightSelected").val(305)
+        }else if(LOGO === 'logocaliche') {
+            $("#widthSelected").val(500)
+            $("#heightSelected").val(500)
+        }
         imageObj.src = LOGO + '.png';
         var widthSelected = $("#widthSelected").val()
         var heightSelected = $("#heightSelected").val()
