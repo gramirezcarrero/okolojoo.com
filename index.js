@@ -29,6 +29,10 @@ function changeLogo(e) {
             $("#widthSelected").val(500)
             $("#heightSelected").val(500)
         }
+        else if(LOGO === 'sai') {
+            $("#widthSelected").val(300)
+            $("#heightSelected").val(300)
+        }
         imageObj.src = LOGO + '.png';
         var widthSelected = $("#widthSelected").val()
         var heightSelected = $("#heightSelected").val()
