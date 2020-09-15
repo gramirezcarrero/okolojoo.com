@@ -26,7 +26,10 @@
             }
             .ico{
                 width: 10vh;
+                padding: 7px;
+                margin: 7px;
             }
+            .hide{display: none;}
             .gridSeudo{
                 padding:80px;
                 display: grid;
@@ -34,13 +37,13 @@
             }
             .col-grid{
                 display: grid;
-                grid-template-columns: 25% 25% 25% 25%;
+                grid-template-columns: auto;
             }
         </style>
     </head>
     <body>
         <div class="gridSeudo">
-            <div>
+            <div class="hide">
                 <h2>
                     Tamaño:
                 </h2>
@@ -69,8 +72,25 @@
                     <div style="width: 15vh;height: 14vh;background:white;" ontouchstart="changeLogo(this)" onclick="changeLogo(this)" id="sai">
                         <img class="ico" src="sai.png">
                     </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <div style="margin-top:80px;height:30px;background:rgb(73, 96, 107);padding:10px;" >
-                        <input id="slider2" type="range" min="100" max="500" step="20" value="250" />
+                        Opacidad:
+                        <input id="slider" type="range" min="0" max="1" step="0.1" value="0.9" />
+                    </div>
+                    <div style="margin-top:80px;height:30px;background:rgb(73, 96, 107);padding:10px;" >
+                        Tamaño proporcional:
+                        <input id="slider1" type="range" min="100" max="500" step="20" value="250" />
+                    </div>
+                    <div style="margin-top:80px;height:30px;background:rgb(73, 96, 107);padding:10px;" >
+                        Ancho:
+                        <input id="slider2" type="range" min="100" max="500" step="10" value="250" />
+                    </div>
+                    <div style="margin-top:80px;height:30px;background:rgb(73, 96, 107);padding:10px;" >
+                        Alto:
+                        <input id="slider3" type="range" min="100" max="500" step="10" value="250" />
                     </div>
                 </div>
 

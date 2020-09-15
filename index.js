@@ -12,7 +12,7 @@ $(".miror").on("change", function () {
     if (LOGO === "logo2") {
         $("#widthSelected").val(200)
         $("#heightSelected").val(200)
-    } else if (LOGO === "white" || LOGO === "marca2"  ) {
+    } else if (LOGO === "white" || LOGO === "marca2") {
         $("#widthSelected").val(500)
         $("#heightSelected").val(305)
     }
@@ -22,14 +22,14 @@ var Logo
 function changeLogo(e) {
     if (imageSelected === true) {
         LOGO = $(e).attr("id")
-        if (LOGO === "white" || LOGO === "marca2"  ) {
+        if (LOGO === "white" || LOGO === "marca2") {
             $("#widthSelected").val(500)
             $("#heightSelected").val(305)
-        }else if(LOGO === 'logocaliche') {
+        } else if (LOGO === 'logocaliche') {
             $("#widthSelected").val(500)
             $("#heightSelected").val(500)
         }
-        else if(LOGO === 'sai') {
+        else if (LOGO === 'sai') {
             $("#widthSelected").val(300)
             $("#heightSelected").val(300)
         }
@@ -78,18 +78,29 @@ function drawImage(_imageObj, width, height) {
 
 }
 // var slider = document.getElementById('slider');
-var slider = document.getElementById('slider2');
+var opacity_ = document.getElementById('slider');
+var tamano = document.getElementById('slider1');
+var ancho_ = document.getElementById('slider2');
+var alto_ = document.getElementById('slider3');
 
-slider.oninput = function () {
-    Logo.opacity(parseFloat(slider.value));
+opacity_.oninput = function () {
+    Logo.opacity(parseFloat(opacity_.value));
     layer.batchDraw()
 };
-slider2.oninput = function () {
-    Logo.width(Number(slider.value));
-    Logo.height(Number(slider.value));
+tamano.oninput = function () {
+    Logo.width(Number(tamano.value));
+    Logo.height(Number(tamano.value));
     layer.batchDraw()
 };
+ancho_.oninput = function () {
+    Logo.width(Number(ancho_.value));
 
+    layer.batchDraw()
+};
+alto_.oninput = function () {
+    Logo.height(Number(alto_.value));
+    layer.batchDraw()
+};
 $("#widthSelected").val()
 
 $("#file_input").change(function (e) {
